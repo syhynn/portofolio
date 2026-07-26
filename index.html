@@ -17,7 +17,7 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Inter"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+                        sans: ['"Montserrat"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -35,18 +35,15 @@
     
     <style>
         body {
-            background-color: #020617; /* Slate 950 */
-            color: #f8fafc; /* Slate 50 */
+            background-color: #f8fafc; /* Slate 950 */
+            color: #0f172a; /* Slate 50 */
             overflow-x: hidden;
         }
         
         /* Enhanced Glassmorphism Panel */
         .glass-panel {
-            background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.7) 100%);
+    border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         /* Glass Hover Effect for Small Items */
@@ -97,7 +94,7 @@
             filter: blur(120px);
             z-index: -1;
             opacity: 0.4;
-            mix-blend-mode: screen;
+            mix-blend-mode: multiply;
             transition: transform 0.1s ease-out;
         }
 
@@ -233,731 +230,338 @@
     <section id="home" class="pt-28 pb-12 md:pt-36 md:pb-20 px-4 relative overflow-hidden">
         <div class="max-w-4xl mx-auto text-center relative z-10">
             
-            <div class="inline-block px-4 py-1.5 mb-6 border border-white/10 rounded-full bg-white/5 backdrop-blur-md shadow-sm hero-animate d-100">
-                <h2 class="text-slate-300 font-semibold tracking-widest uppercase text-xs">Creative Portfolio 2026</h2>
-            </div>
+            <div class="inline-block px-4 py-1.5 mb-6 border border-slate-200 rounded-full bg-white shadow-sm hero-animate d-100">
+    <h2 class="text-black font-semibold tracking-widest uppercase text-xs">Creative Portfolio 2026</h2>
+</div>
             
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight text-white hero-animate d-300">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight text-black hero-animate d-300">
                 Konten Kreatif & <br class="hidden md:block" /> Strategi Digital Marketing.
             </h1>
             
-            <p class="mt-4 text-xl text-slate-300 mb-10 leading-relaxed max-w-3xl mx-auto font-light hero-animate d-500">
-                Saya <strong class="text-white font-medium">Syahrul Putra Mulyana</strong>, Social Media Specialist yang siap membantu merek Anda berkembang melalui konten kreatif dan strategi digital berbasis data.
+            <p class="mt-4 text-xl text-black-300 mb-10 leading-relaxed max-w-3xl mx-auto font-regular hero-animate d-500">
+                Saya <strong class="text-black font-medium">Syahrul Putra Mulyana</strong>, Social Media Specialist yang siap membantu merek Anda berkembang melalui konten kreatif dan strategi digital berbasis data.
             </p>
             
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4 hero-animate d-700">
                 <a href="https://wa.me/62895366966056" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-600 to-blue-600 text-white rounded-full font-semibold text-lg transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(139,92,246,0.4)] hover:scale-105 hover:-translate-y-1">
                     <i class="fab fa-whatsapp text-xl"></i> Hubungi WhatsApp
                 </a>
-                <a href="https://instagram.com/syhynn_" target="_blank" class="w-full sm:w-auto px-8 py-4 glass-panel hover:bg-white/10 text-white rounded-full font-semibold text-lg transition-all flex items-center justify-center gap-2 hover:scale-105 hover:-translate-y-1 border border-white/10 hover:border-white/20">
-                    <i class="fab fa-instagram text-xl text-pink-500"></i> Kunjungi Instagram
-                </a>
             </div>
             
         </div>
     </section>
 
-    <!-- About & Tools Section -->
-    <section id="about" class="py-20 relative z-10">
+   <!-- START: Section Perangkat & Software -->
+<section class="relative w-full py-24 bg-gradient-to-br from-black via-zinc-950 to-neutral-950 overflow-hidden border-y border-white/5 group">
+    
+    <!-- Animasi Background Interaktif -->
+    <div class="absolute inset-0 z-0 pointer-events-none opacity-30 group-hover:opacity-80 transition-opacity duration-1000">
+        <!-- Cahaya Biru di Kiri Atas -->
+        <div class="absolute -top-32 -left-32 w-[30rem] h-[30rem] bg-blue-600/15 rounded-full blur-[120px] animate-[pulse_6s_ease-in-out_infinite]"></div>
+        
+        <!-- Cahaya Brand/Cyan di Kanan Bawah -->
+        <div class="absolute -bottom-32 -right-32 w-[30rem] h-[30rem] bg-[#00C4CC]/10 rounded-full blur-[120px] animate-[pulse_8s_ease-in-out_infinite_2s]"></div>
+        
+        <!-- Grid/Pattern tipis berputar di tengah -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.02)_0%,transparent_40%)] animate-[spin_30s_linear_infinite]"></div>
+    </div>
+
+    <!-- Konten Utama -->
+    <div class="relative z-10 container mx-auto px-4 w-full text-center reveal-up">
+        
+        <!-- Main Title -->
+        <h3 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-3">
+            Software, Platform, Tools
+        </h3>
+        
+        <!-- Subtitle / Lorem Ipsum dengan Jarak (mb-16) -->
+        <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto mb-16 font-regular">
+            Software, platform dan tools yang digunakan untuk memproduksi konten.
+        </p>
+        
+        <div class="space-y-14">
+            
+            <!-- Creative Software -->
+            <div class="relative">
+                <h4 class="text-slate-400 text-sm uppercase tracking-[0.2em] mb-8 text-center font-semibold">Creative Software</h4>
+                <div class="flex flex-wrap gap-1 md:gap-2 justify-center items-start">
+                    <a href="https://instagram.com/canva" target="_blank" title="Canva" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#00C4CC] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/CANVA.svg" alt="Canva" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">Canva</span>
+                    </a>
+                    <a href="https://instagram.com/capcutapp" target="_blank" title="CapCut" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-white hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/CAPCUT.svg" alt="CapCut" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">CapCut</span>
+                    </a>
+                    <a href="https://instagram.com/photoshop" target="_blank" title="Photoshop" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#31A8FF] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/PHOTOSHOP.svg" alt="Photoshop" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">Photoshop</span>
+                    </a>
+                    <a href="https://instagram.com/adobeillustrator" target="_blank" title="Adobe Illustrator" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#FF9A00] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/ILUSTRATOR.svg" alt="Illustrator" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">Illustrator</span>
+                    </a>
+                    <a href="https://instagram.com/adobepremiere" target="_blank" title="Premiere Pro" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#9999FF] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/PREMIER PRO.svg" alt="Premiere" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">Premiere</span>
+                    </a>
+                    <a href="https://instagram.com/coreldraw" target="_blank" title="CorelDraw" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#21C55E] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/CORELDRAW.svg" alt="CorelDraw" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">CorelDraw</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Management & Analytics -->
+            <div class="relative">
+                <h4 class="text-slate-400 text-sm uppercase tracking-[0.2em] mb-8 text-center font-semibold">Management & Analytics</h4>
+                <div class="flex flex-wrap gap-1 md:gap-2 justify-center items-start">
+                    <a href="https://instagram.com/google" target="_blank" title="Google Sheets" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#0F9D58] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/GOOGLE SHEET.svg" alt="Google Sheets" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium text-center tracking-wide">Google Sheets</span>
+                    </a>
+                    <a href="https://instagram.com/google" target="_blank" title="Google Docs" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#4285F4] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/GOOGLE DOC.svg" alt="Google Docs" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium text-center tracking-wide">Google Docs</span>
+                    </a>
+                    <a href="https://instagram.com/notionhq" target="_blank" title="Notion" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-white hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/NOTION.svg" alt="Notion" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">Notion</span>
+                    </a>
+                    <a href="https://instagram.com/meta" target="_blank" title="Meta Business" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#0668E1] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/META.svg" alt="Meta Business" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium text-center tracking-wide">Meta Business</span>
+                    </a>
+                    <a href="https://instagram.com/milanote" target="_blank" title="Milanote" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#31303B] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/MILANOTE.svg" alt="Milanote" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">Milanote</span>
+                    </a>
+                    <a href="https://instagram.com/tiktok" target="_blank" title="TikTok Studio" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#FF0050] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/TIKTOK STUDIO.svg" alt="TikTok Studio" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium text-center tracking-wide">TikTok Studio</span>
+                    </a>
+                    <a href="https://instagram.com/google" target="_blank" title="Google Ads" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#3D8BD9] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/GOOGLE ADS.svg" alt="Google Ads" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">Google Ads</span>
+                    </a>
+                    <a href="https://instagram.com/mirohq" target="_blank" title="Miro" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#FFD02F] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/MIRO.svg" alt="Miro" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">Miro</span>
+                    </a>
+                    <a href="https://instagram.com/xmind" target="_blank" title="XMind" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#EB5D50] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/XMIND.svg" alt="XMind" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">XMind</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Artificial Intelligence -->
+            <div class="relative">
+                <h4 class="text-slate-400 text-sm uppercase tracking-[0.2em] mb-8 text-center font-semibold">Artificial Intelligence</h4>
+                <div class="flex flex-wrap gap-1 md:gap-2 justify-center items-start">
+                    <a href="https://instagram.com/google" target="_blank" title="Gemini" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#8E75FF] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/GEMINI.svg" alt="Gemini" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">Gemini</span>
+                    </a>
+                    <a href="https://instagram.com/openai" target="_blank" title="ChatGPT" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#10A37F] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/GPT.svg" alt="ChatGPT" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">ChatGPT</span>
+                    </a>
+                    <a href="https://instagram.com/anthropic" target="_blank" title="Claude" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#D97757] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/CLAUDE.svg" alt="Claude" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">Claude</span>
+                    </a>
+                    <a href="https://instagram.com/meta" target="_blank" title="Meta AI" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#0668E1] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/META AI.svg" alt="Meta AI" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">Meta AI</span>
+                    </a>
+                    <a href="https://instagram.com/deepseek" target="_blank" title="DeepSeek" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-[#3B82F6] hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/DEEPSEEK.svg" alt="DeepSeek" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">DeepSeek</span>
+                    </a>
+                    <a href="https://instagram.com/github" target="_blank" title="GitHub Copilot" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-white hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/COPILOT.svg" alt="Copilot" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">Copilot</span>
+                    </a>
+                    <a href="https://instagram.com/midjourney" target="_blank" title="Midjourney" class="group/logo flex flex-col items-center gap-3 text-gray-500 hover:text-white hover:scale-110 hover:-translate-y-2 transition-all duration-300 w-24 md:w-28">
+                        <img src="UPDATE/GAMBAR TOOLS SOFTWARE/MIDJOURNEY.svg" alt="Midjourney" class="w-16 h-16 md:w-20 md:h-20 object-contain grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300">
+                        <span class="text-sm md:text-base font-medium tracking-wide text-center">Midjourney</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- END: Section Perangkat & Software -->
+
+  <!-- Experience Section (Logo Grid Concept) -->
+<section id="experience" class="py-24 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal-up">
+            <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-black mb-4">Pengalaman Kerja, Freelance, Magang</h2>
+            <p class="text-black-400 max-w-2xl mx-auto text-lg font-regular">Kumpulan perjalanan profesional bersama berbagai perusahaan dan UMKM. Klik logo untuk mengunjungi profil media sosial perusahaan.</p>
+        </div>
+
+        <!-- Client Logos Grid (Rapat & Mengelompok di Tengah) -->
+        <!-- Perubahan: Menggunakan max-w-3xl agar container lebih sempit dan gap-4 md:gap-5 untuk jarak rapat -->
+        <div class="max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 items-center justify-items-center mt-12">
+            
+            <!-- Telur Kita -->
+            <a href="https://www.tiktok.com/@telurkitaofficial?is_from_webapp=1&sender_device=pc" target="_blank" class="group flex items-center justify-center aspect-square w-full max-w-[160px] p-2 transition-all duration-500 reveal-scale cursor-pointer">
+                <img src="UPDATE/PENGALAMAN KERJA/LOGO TELURKITA.svg" alt="Telur Kita" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110 drop-shadow-none group-hover:drop-shadow-[0_10px_20px_rgba(239,68,68,0.3)]">
+            </a>
+
+            <!-- Mitra Mandiri -->
+            <a href="https://www.instagram.com/mitramandiricompkdr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="group flex items-center justify-center aspect-square w-full max-w-[160px] p-2 transition-all duration-500 reveal-scale cursor-pointer">
+                <img src="UPDATE/PENGALAMAN KERJA/LOGO MITRA MANDIRI.svg" alt="Mitra Mandiri" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110 drop-shadow-none group-hover:drop-shadow-[0_10px_20px_rgba(59,130,246,0.3)]">
+            </a>
+
+            <!-- Ortidjoe Bakery -->
+            <a href="https://www.instagram.com/ortidjoebakery/?utm_source=ig_web_button_share_sheet" target="_blank" class="group flex items-center justify-center aspect-square w-full max-w-[160px] p-2 transition-all duration-500 reveal-scale cursor-pointer">
+                <img src="UPDATE/PENGALAMAN KERJA/ORTIDJOE.svg" alt="Ortidjoe Bakery" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110 drop-shadow-none group-hover:drop-shadow-[0_10px_20px_rgba(16,185,129,0.3)]">
+            </a>
+
+            <!-- Oase Cafe -->
+            <a href="https://www.instagram.com/oasekedai_kampunginggris?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="group flex items-center justify-center aspect-square w-full max-w-[150px] p-2 transition-all duration-500 reveal-scale cursor-pointer">
+                <img src="UPDATE/PENGALAMAN KERJA/OASE CAFE.svg" alt="Oase Cafe" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110 drop-shadow-none group-hover:drop-shadow-[0_10px_20px_rgba(245,158,11,0.3)]">
+            </a>
+
+            <!-- Homely Syariah -->
+            <a href="https://instagram.com/homely_syariah" target="_blank" class="group flex items-center justify-center aspect-square w-full max-w-[150px] p-2 transition-all duration-500 reveal-scale cursor-pointer">
+                <img src="UPDATE/PENGALAMAN KERJA/HOMELY.svg" alt="Homely Syariah" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110 drop-shadow-none group-hover:drop-shadow-[0_10px_20px_rgba(20,184,166,0.3)]">
+            </a>
+
+            <!-- DiBimbing Agency -->
+            <a href="https://www.instagram.com/dibimbing_agency" target="_blank" class="group flex items-center justify-center aspect-square w-full max-w-[240px] p-2 transition-all duration-500 reveal-scale cursor-pointer">
+                <img src="UPDATE/PENGALAMAN KERJA/DIBIMBING.svg" alt="DiBimbing Agency" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110 drop-shadow-none group-hover:drop-shadow-[0_10px_20px_rgba(99,102,241,0.3)]">
+            </a>
+
+            <!-- Warung Sambal Cidero -->
+            <a href="https://wa.me/62895366966056" target="_blank" class="group flex items-center justify-center aspect-square w-full max-w-[160px] p-2 transition-all duration-500 reveal-scale cursor-pointer">
+                <img src="UPDATE/PENGALAMAN KERJA/CIDERO.svg" alt="Warung Sambal Cidero" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110 drop-shadow-none group-hover:drop-shadow-[0_10px_20px_rgba(239,68,68,0.3)]">
+            </a>
+
+            <!-- Kue Midaya -->
+            <a href="https://www.instagram.com/kuemidaya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="group flex items-center justify-center aspect-square w-full max-w-[160px] p-2 transition-all duration-500 reveal-scale cursor-pointer">
+                <img src="UPDATE/PENGALAMAN KERJA/MIDAYA.svg" alt="Kue Midaya" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110 drop-shadow-none group-hover:drop-shadow-[0_10px_20px_rgba(99,102,241,0.3)]">
+            </a>
+
+            <!-- PRFM -->
+            <a href="https://www.instagram.com/kuemidaya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="group flex items-center justify-center aspect-square w-full max-w-[200px] p-2 transition-all duration-500 reveal-scale cursor-pointer">
+                <img src="UPDATE/PENGALAMAN KERJA/LOGO PRFM.svg" alt="Performance Group" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110 drop-shadow-none group-hover:drop-shadow-[0_10px_20px_rgba(99,102,241,0.3)]">
+            </a>
+
+            <!-- SOLUSI -->
+            <a href="https://www.instagram.com/kuemidaya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="group flex items-center justify-center aspect-square w-full max-w-[160px] p-2 transition-all duration-500 reveal-scale cursor-pointer">
+                <img src="UPDATE/PENGALAMAN KERJA/SOLUSI.svg" alt="Solusi Academy" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110 drop-shadow-none group-hover:drop-shadow-[0_10px_20px_rgba(99,102,241,0.3)]">
+            </a>
+
+            <!-- DJOETEK -->
+            <a href="https://www.instagram.com/kuemidaya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="group flex items-center justify-center aspect-square w-full max-w-[140px] p-2 transition-all duration-500 reveal-scale cursor-pointer">
+                <img src="UPDATE/PENGALAMAN KERJA/MIE DJOETEK.svg" alt="Mie Djoetek" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110 drop-shadow-none group-hover:drop-shadow-[0_10px_20px_rgba(99,102,241,0.3)]">
+            </a>
+        </div>
+    </div> 
+</section>
+
+    <!-- Portfolio Gallery Section (Per Brand Layout) -->
+    <section id="portfolio" class="py-24 relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <!-- Header Section -->
+            <div class="text-center mb-16 relative z-50 reveal-up">
+                <div class="inline-block px-3 py-1 mb-4 border border-white/10 rounded-full bg-white/5 backdrop-blur-sm text-[10px] font-semibold tracking-widest text-emerald-300 uppercase">Portfolio</div>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">Karya Kreatif</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg font-light">Pilih brand di bawah ini untuk melihat detail lengkap portofolio dan hasil karya kami.</p>
+            </div>
+
+            <!-- Grid Kolom Per Brand -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Tools & Software -->
-                <div class="order-2 lg:order-1 reveal-up">
-                    <h3 class="text-2xl font-bold mb-8 flex items-center gap-3 text-white">
-                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-500 to-blue-500 flex items-center justify-center shadow-lg shadow-brand-500/30">
-                            <i class="fas fa-layer-group text-white"></i> 
-                        </div>
-                        Perangkat & Software
-                    </h3>
-                    
-                    <div class="space-y-6">
-                        <div>
-                            <h4 class="text-slate-400 text-sm uppercase tracking-wider mb-3">Creative Software</h4>
-                            <div class="flex flex-wrap gap-3">
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 transition-transform cursor-default text-white"><img src="images/canva2.png" class="w-6 h-6"> Canva</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 transition-transform cursor-default text-white"><img src="images/capcut.png" class="w-6 h-6"> CapCut</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 transition-transform cursor-default text-white"><img src="images/photoshop.png" class="w-6 h-6"> Photoshop</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 transition-transform cursor-default text-white"><img src="images/ilustrator.png" class="w-6 h-6"> Adobe Illustrator</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 transition-transform cursor-default text-white"><img src="images/premier pro.png" class="w-6 h-6"> Premiere Pro</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 transition-transform cursor-default text-white"><img src="images/corel.png" class="w-6 h-6"> CorelDraw</span>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h4 class="text-slate-400 text-sm uppercase tracking-wider mb-3">Management & Analytics</h4>
-                            <div class="flex flex-wrap gap-3">
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 text-white"><img src="images/google sheet.png" class="w-6 h-6"> Google Sheets</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 text-white"><img src="images/google doc.png" class="w-6 h-6"> Google Docs</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 text-white"><img src="images/notion.png" class="w-6 h-6"> Notion</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 text-white"><img src="images/meta.png" class="w-6 h-6"> Meta Business</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 text-white"><img src="images/milanote.png" class="w-6 h-6"> Milanote</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 text-white"><img src="images/tiktok logo.png" class="w-6 h-6"> TikTok Studio</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 text-white"><img src="images/google ads.png" class="w-6 h-6"> Google Ads</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 text-white"><img src="images/miro.png" class="w-6 h-6"> Miro</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 text-white"><img src="images/xmind.png" class="w-6 h-6"> XMind</span>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h4 class="text-slate-400 text-sm uppercase tracking-wider mb-3">Artificial Intelligence</h4>
-                            <div class="flex flex-wrap gap-3">
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 text-white"><img src="images/gemini.png" class="=w-6 h-6"> Gemini</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 text-white"><img src="images/chatgpt.png" class="=w-6 h-6"> ChatGPT</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 text-white"><img src="images/claude.png" class="ww-6 h-6"> Claude</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 text-white"><img src="images/meta.png" class="w-6 h-6"> Meta AI</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 text-white"><img src="images/deepseek.png" class="w-6 h-6"> DeepSeek</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 text-white"><img src="images/github.png" class="w-6 h-6"> GitHub Copilot</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 text-white"><img src="images/mid.png" class="w-6 h-6"> Midjourney</span>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h4 class="text-slate-400 text-sm uppercase tracking-wider mb-3">Hardware</h4>
-                            <div class="flex flex-wrap gap-3">
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 transition-transform cursor-default text-white"><i class="fas fa-mobile-alt text-brand-400"></i> iPhone</span>
-                                <span class="glass-tag px-4 py-2 rounded-lg flex items-center gap-2 transition-transform cursor-default text-white"><i class="fas fa-laptop text-brand-400"></i> Laptop </span>
-                            </div>
-                        </div>
+                <!-- Brand 1: Telur Kita -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col hover:-translate-y-2 transition-all duration-300 shadow-lg reveal-up">
+                    <div class="aspect-[4/3] w-full overflow-hidden">
+                        <img src="telurkita/design grafis/design telurkita 1.png" alt="Telur Kita" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
-                </div>
-
-                <!-- Education & Intro Info -->
-                <div class="order-1 lg:order-2 glass-panel p-8 rounded-3xl relative overflow-hidden group reveal-scale">
-                    <div class="absolute inset-0 bg-gradient-to-br from-brand-500/5 to-blue-500/5 opacity-50"></div>
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-brand-500/20 to-transparent rounded-bl-full"></div>
-                    
-                    <div class="relative z-10">
-                        <div class="inline-block px-3 py-1 mb-4 border border-white/10 rounded-full bg-white/5 backdrop-blur-sm text-[10px] font-semibold tracking-widest text-brand-300 uppercase">Profil</div>
-                        <h3 class="text-3xl font-bold tracking-tight text-white mb-6">Tentang Saya</h3>
-                        
-                        <!-- Foto Diri & Penjelasan (Developer Only) -->
-                        <div class="mb-6">
-                            <div class="overflow-hidden rounded-xl mb-3 border border-white/10 shadow-lg relative group">
-                                
-                                <!-- Developer: Ganti link 'src' di bawah ini dengan link/lokasi foto asli Anda untuk menggantinya -->
-                                <img src="images/Foto syahrul.png" class="w-1000" alt="Syahrul Putra Mulyana" class="w-full h-48 md:h-56 object-cover object-center transition-transform duration-700 group-hover:scale-105">
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-
-                            </div>
-                            <p class="text-sm text-slate-300 italic text-center px-4">
-                                
-                            </p>
-                        </div>
-
-                        <p class="text-slate-300 leading-relaxed mb-8">
-                            Saya percaya bahwa desain visual yang hebat bukan hanya tentang estetika, melainkan tentang bagaimana menyampaikan pesan secara efisien dan membangun <em>brand awareness</em>. Data analitik adalah kompas saya dalam setiap strategi konten.
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-white mb-3">Telur Kita</h3>
+                        <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </p>
-                        
-                            <h4 class="text-lg font-semibold mb-3 border-b border-white/10 pb-2 text-white">Pendidikan</h4>
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-full glass-tag flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-graduation-cap text-brand-400 text-xl"></i>
-                            </div>
-                            <div>
-                                <h5 class="font-bold text-lg text-white">Universitas Nusantara PGRI Kediri</h5>
-                                <p class="text-slate-400 text-sm">Teknik Informatika <em>(On Study)</em>.</p>
-                            </div>
-                        </div>
+                        <a href="page-telurkita.html" class="inline-block text-center w-full px-4 py-3 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-xl transition-colors duration-300">
+                            Lihat Selengkapnya
+                        </a>
                     </div>
                 </div>
+
+                <!-- Brand 2: Mitra Mandiri -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col hover:-translate-y-2 transition-all duration-300 shadow-lg reveal-up" style="animation-delay: 100ms;">
+                    <div class="aspect-[4/3] w-full overflow-hidden">
+                        <img src="mitramandiri/design grafis/design 1.jpg" alt="Mitra Mandiri" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-white mb-3">Mitra Mandiri</h3>
+                        <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                        <a href="page-mitramandiri.html" class="inline-block text-center w-full px-4 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition-colors duration-300">
+                            Lihat Selengkapnya
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Brand 3: Oase Cafe -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col hover:-translate-y-2 transition-all duration-300 shadow-lg reveal-up" style="animation-delay: 200ms;">
+                    <div class="aspect-[4/3] w-full overflow-hidden">
+                        <img src="oase/desin grafis/design 1.jpg" alt="Oase Cafe" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-white mb-3">Oase Cafe</h3>
+                        <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                        <a href="page-oase.html" class="inline-block text-center w-full px-4 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-xl transition-colors duration-300">
+                            Lihat Selengkapnya
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Brand 4: Homely Syariah -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col hover:-translate-y-2 transition-all duration-300 shadow-lg reveal-up" style="animation-delay: 300ms;">
+                    <div class="aspect-[4/3] w-full overflow-hidden">
+                        <img src="homely/design/design 1.jpg" alt="Homely Syariah" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-white mb-3">Homely Syariah</h3>
+                        <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                        <a href="page-homely.html" class="inline-block text-center w-full px-4 py-3 bg-teal-500 hover:bg-teal-600 text-white font-semibold rounded-xl transition-colors duration-300">
+                            Lihat Selengkapnya
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Brand 5: Ortidjoe Bakery -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col hover:-translate-y-2 transition-all duration-300 shadow-lg reveal-up" style="animation-delay: 400ms;">
+                    <div class="aspect-[4/3] w-full overflow-hidden">
+                        <img src="ortidjoe/design/design 1.jpg" alt="Ortidjoe Bakery" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-white mb-3">Ortidjoe Bakery</h3>
+                        <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                        <a href="page-ortidjoe.html" class="inline-block text-center w-full px-4 py-3 bg-emerald-400 hover:bg-emerald-500 text-white font-semibold rounded-xl transition-colors duration-300">
+                            Lihat Selengkapnya
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
-
-    <!-- Experience & Impact Section (With 3D Flip Cards) -->
-    <section id="experience" class="py-24 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 reveal-up">
-                <div class="inline-block px-3 py-1 mb-4 border border-white/10 rounded-full bg-white/5 backdrop-blur-sm text-[10px] font-semibold tracking-widest text-blue-300 uppercase">Experience</div>
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">Pengalaman & Pencapaian</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto text-lg font-light">Arahkan atau geser (hover/tap) pada kartu di bawah ini untuk melihat bukti analitik statistik dari strategi konten yang diterapkan.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Telur Kita -->
-                <div class="flip-card h-[440px] group reveal-scale">
-                    <div class="flip-card-inner">
-                        <!-- Front Face -->
-                        <div class="flip-card-front glass-panel p-6 shadow-[0_0_30px_rgba(239,68,68,0.15)] overflow-hidden flex flex-col border border-white/10">
-                            <!-- Flip Indicator -->
-                            <div class="absolute top-5 right-5 flex items-center gap-2 text-white/50 z-20">
-                                <span class="text-[10px] uppercase tracking-widest font-bold opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity"><span class="lg:hidden">Geser &larr;</span><span class="hidden lg:inline">Balik</span></span>
-                                <i class="fas fa-arrows-rotate animate-[spin_4s_linear_infinite] group-hover:text-red-400 transition-colors"></i>
-                            </div>
-                            <!-- Styling effects -->
-                            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-rose-500"></div>
-                            <div class="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-50"></div>
-                            
-                            <div class="relative z-10 flex-1 flex flex-col">
-                                <div class="flex justify-between items-start mb-6 pt-2">
-                                    <div class="flex items-center gap-3">
-                                        <img src="images/logo telurkita.png" alt="Logo Telur Kita" class="w-12 h-12 rounded-full object-cover border border-white/20">
-                                        <div>
-                                            <h3 class="text-xl font-bold text-white">PT. Assasta Sampoerna Indonesia</h3>
-                                            <p class="text-red-400 text-sm font-medium">TelurKita</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-4 mb-auto">
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Total Tayangan</span>
-                                        <span class="font-bold text-white">36.000.000 Tayangan</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Jangkauan Akun</span>
-                                        <span class="font-bold text-white">529.000 Akun</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Reach</span>
-                                        <span class="font-bold text-green-400">+97.7%</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Fokus Konversi</span>
-                                        <span class="font-bold text-green-400">Whatsapp Leads</span>
-                                    </div>
-                                </div>
-                                <p class="text-sm text-slate-300 leading-relaxed mt-6">
-                                    Mendorong konversi penjualan dengan capaian omzet tahunan <strong class="text-white">Rp900 Juta - Rp1 Miliar</strong>. Memperluas eksposur brand secara signifikan.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <!-- Back Face (Data Insight) -->
-                        <div class="flip-card-back glass-panel overflow-hidden border border-white/10">
-                            <!-- GANTI LINK IMG DI BAWAH DENGAN SCREENSHOT STATISTIK ASLI ANDA -->
-                            <img src="images/statistik ig mitra.png" alt="Statistik Telur Kita" class="absolute inset-0 w-full h-full object-cover opacity-40">
-                            <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"></div>
-                            
-                            <div class="relative z-10 h-full flex flex-col items-center justify-center p-6 text-center">
-                                <div class="w-16 h-16 rounded-full bg-red-500/20 border border-red-500/50 flex items-center justify-center mb-4">
-                                    <i class="fab fa-tiktok text-2xl text-red-400"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold text-white mb-2">Akun TikTok</h3>
-                                <p class="text-sm text-slate-300 mb-8 font-light">Kunjungi profil untuk detail.</p>
-                                <a href="https://www.tiktok.com/@telurkitaofficial?is_from_webapp=1&sender_device=pc" target="_blank" class="px-6 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-sm text-white font-medium transition-colors flex items-center gap-2">
-                                    <i #></i> Kunjungi Profil
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mitra Mandiri -->
-                <div class="flip-card h-[440px] group reveal-scale">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front glass-panel p-6 shadow-[0_0_30px_rgba(59,130,246,0.15)] overflow-hidden flex flex-col border border-white/10">
-                            <div class="absolute top-5 right-5 flex items-center gap-2 text-white/50 z-20">
-                                <span class="text-[10px] uppercase tracking-widest font-bold opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity"><span class="lg:hidden">Geser &larr;</span><span class="hidden lg:inline">Balik</span></span>
-                                <i class="fas fa-arrows-rotate animate-[spin_4s_linear_infinite] group-hover:text-blue-400 transition-colors"></i>
-                            </div>
-                            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
-                            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-50"></div>
-                            
-                            <div class="relative z-10 flex-1 flex flex-col">
-                                <div class="flex justify-between items-start mb-6 pt-2">
-                                    <div class="flex items-center gap-3">
-                                        <img src="images/logo mitra mandiri.png" alt="Logo Mitra Jaya" class="w-12 h-12 rounded-full object-cover border border-white/20">
-                                        <div>
-                                            <h3 class="text-xl font-bold text-white">CV. Mitra Jaya</h3>
-                                            <p class="text-blue-400 text-sm font-medium">Mitra Mandiri Computer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-4 mb-auto">
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Reach</span>
-                                        <span class="font-bold text-green-400">+2.032%</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Jangkauan Akun</span>
-                                        <span class="font-bold text-white">1.653 Akun</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Total Tayangan</span>
-                                        <span class="font-bold text-white">17.804 Tayangan</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Fokus Konversi</span>
-                                        <span class="font-bold text-green-400">Sales</span>
-                                    </div>
-                                </div>
-                                <p class="text-sm text-slate-300 leading-relaxed mt-6">
-                                    Mengelola akun secara penuh. Strategi konten berhasil melonjakkan tayangan secara dramatis dan mendorong peningkatan interaksi pelanggan.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="flip-card-back glass-panel overflow-hidden border border-white/10">
-                            <!-- GANTI LINK IMG DI BAWAH DENGAN SCREENSHOT STATISTIK ASLI ANDA -->
-                            <img src="images/statistik ig mitra.png" alt="Statistik Mitra Mandiri" class="absolute inset-0 w-full h-full object-cover opacity-40">
-                            <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"></div>
-                            
-                            <div class="relative z-10 h-full flex flex-col items-center justify-center p-6 text-center">
-                                <div class="w-16 h-16 rounded-full bg-blue-500/20 border border-blue-500/50 flex items-center justify-center mb-4">
-                                    <i class="fab fa-instagram text-2xl text-blue-400"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold text-white mb-2">Akun Instagram</h3>
-                                <p class="text-sm text-slate-300 mb-8 font-light">Kunjungi akun untuk detail.</p>
-                                <a href="https://www.instagram.com/mitramandiricompkdr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="px-6 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-sm text-white font-medium transition-colors flex items-center gap-2">
-                                    <i #></i> Kunjungi Profil
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ortidjoe Bakery -->
-                <div class="flip-card h-[440px] group reveal-scale">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front glass-panel p-6 shadow-[0_0_30px_rgba(16,185,129,0.15)] overflow-hidden flex flex-col border border-white/10">
-                            <div class="absolute top-5 right-5 flex items-center gap-2 text-white/50 z-20">
-                                <span class="text-[10px] uppercase tracking-widest font-bold opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity"><span class="lg:hidden">Geser &larr;</span><span class="hidden lg:inline">Balik</span></span>
-                                <i class="fas fa-arrows-rotate animate-[spin_4s_linear_infinite] group-hover:text-emerald-400 transition-colors"></i>
-                            </div>
-                            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
-                            <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-50"></div>
-                            
-                            <div class="relative z-10 flex-1 flex flex-col">
-                                <div class="flex justify-between items-start mb-6 pt-2">
-                                    <div class="flex items-center gap-3">
-                                        <img src="images/logo ortidjoe.png" alt="Logo Ortidjoe Bakery" class="w-12 h-12 rounded-full object-cover border border-white/20">
-                                        <div>
-                                            <h3 class="text-xl font-bold text-white">CV. Ortidjoe Utama</h3>
-                                            <p class="text-emerald-400 text-sm font-medium">Ortidjoe Bakery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-4 mb-auto">
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Reach</span>
-                                        <span class="font-bold text-green-400">1.955,2%</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Total Tayangan</span>
-                                        <span class="font-bold text-white">40.984 Tayangan</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Non-Pengikut (Pasar Baru)</span>
-                                        <span class="font-bold text-white">86,8%</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Fokus Konversi</span>
-                                        <span class="font-bold text-green-400">WhatsApp Leads</span>
-                                    </div>
-                                </div>
-                                
-                                <p class="text-sm text-slate-300 leading-relaxed mt-6">
-                                    Mengeksekusi strategi sosial media yang menembus target penjualan hampers Idulfitri. Menarik perhatian pasar luas secara efektif.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flip-card-back glass-panel overflow-hidden border border-white/10">
-                            <!-- GANTI LINK IMG DI BAWAH DENGAN SCREENSHOT STATISTIK ASLI ANDA -->
-                            <img src="images/statistik ig mitra.png" alt="Statistik Ortidjoe Bakery" class="absolute inset-0 w-full h-full object-cover opacity-40">
-                            <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"></div>
-                            
-                            <div class="relative z-10 h-full flex flex-col items-center justify-center p-6 text-center">
-                                <div class="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/50 flex items-center justify-center mb-4">
-                                    <i class="fab fa-instagram text-2xl text-emerald-400"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold text-white mb-2">Akun Instagram</h3>
-                                <p class="text-sm text-slate-300 mb-8 font-light">Kunjungi akun untuk detail.</p>
-                                <a href="https://www.instagram.com/ortidjoebakery/?utm_source=ig_web_button_share_sheet" target="_blank" class="px-6 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-sm text-white font-medium transition-colors flex items-center gap-2">
-                                    <i #></i> Kunjungi Profil
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Oase Cafe -->
-                <div class="flip-card h-[440px] group reveal-scale">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front glass-panel p-6 shadow-[0_0_30px_rgba(245,158,11,0.15)] overflow-hidden flex flex-col border border-white/10">
-                            <div class="absolute top-5 right-5 flex items-center gap-2 text-white/50 z-20">
-                                <span class="text-[10px] uppercase tracking-widest font-bold opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity"><span class="lg:hidden">Geser &larr;</span><span class="hidden lg:inline">Balik</span></span>
-                                <i class="fas fa-arrows-rotate animate-[spin_4s_linear_infinite] group-hover:text-amber-400 transition-colors"></i>
-                            </div>
-                            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 to-yellow-500"></div>
-                            <div class="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent opacity-50"></div>
-                            
-                            <div class="relative z-10 flex-1 flex flex-col">
-                                <div class="flex justify-between items-start mb-6 pt-2">
-                                    <div class="flex items-center gap-3">
-                                        <img src="images/logo oase.png" alt="Logo Oase Cafe" class="w-12 h-12 rounded-full object-cover border border-white/20">
-                                        <div>
-                                            <h3 class="text-xl font-bold text-white">Oase Kedai</h3>
-                                            <p class="text-amber-400 text-sm font-medium">Oase Kedai Kediri & Pare</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-4 mb-auto">
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Total Tayangan</span>
-                                        <span class="font-bold text-white">17.168</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Jangkauan (Reach)</span>
-                                        <span class="font-bold text-green-400">1.634</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Non-Pengikut (Pasar Baru)</span>
-                                        <span class="font-bold text-white">94,5%</span>
-                                    </div>
-                                </div>
-                                <p class="text-sm text-slate-300 leading-relaxed mt-6">
-                                    Mendongkrak visibilitas brand secara signifikan. Memvalidasi keberhasilan menarik perhatian pasar yang lebih luas dari <strong class="text-white font-medium">non-followers.</strong>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flip-card-back glass-panel overflow-hidden border border-white/10">
-                            <!-- GANTI LINK IMG DI BAWAH DENGAN SCREENSHOT STATISTIK ASLI ANDA -->
-                            <img src="images/statistik ig mitra.png" alt="Statistik Oase Cafe" class="absolute inset-0 w-full h-full object-cover opacity-40">
-                            <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"></div>
-                            
-                            <div class="relative z-10 h-full flex flex-col items-center justify-center p-6 text-center">
-                                <div class="w-16 h-16 rounded-full bg-amber-500/20 border border-amber-500/50 flex items-center justify-center mb-4">
-                                    <i class="fab fa-instagram text-2xl text-amber-400"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold text-white mb-2">Akun Instagram</h3>
-                                <p class="text-sm text-slate-300 mb-8 font-light">Kunjungi profil untuk detail.</p>
-                                <a href="https://www.instagram.com/oasekedai_kampunginggris?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="px-6 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-sm text-white font-medium transition-colors flex items-center gap-2">
-                                    <i #></i> Kunjungi Profil
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Homely Syariah -->
-                <div class="flip-card h-[440px] group reveal-scale">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front glass-panel p-6 shadow-[0_0_30px_rgba(20,184,166,0.15)] overflow-hidden flex flex-col border border-white/10">
-                            <div class="absolute top-5 right-5 flex items-center gap-2 text-white/50 z-20">
-                                <span class="text-[10px] uppercase tracking-widest font-bold opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity"><span class="lg:hidden">Geser &larr;</span><span class="hidden lg:inline">Balik</span></span>
-                                <i class="fas fa-arrows-rotate animate-[spin_4s_linear_infinite] group-hover:text-teal-400 transition-colors"></i>
-                            </div>
-                            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500 to-emerald-400"></div>
-                            <div class="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-transparent opacity-50"></div>
-                            
-                            <div class="relative z-10 flex-1 flex flex-col">
-                                <div class="flex justify-between items-start mb-6 pt-2">
-                                    <div class="flex items-center gap-3">
-                                        <img src="images/logo homely.png" alt="Logo Homely Syariah" class="w-12 h-12 rounded-full object-cover border border-white/20">
-                                        <div>
-                                            <h3 class="text-xl font-bold text-white">Penginapan Homely Syariah</h3>
-                                            <p class="text-teal-400 text-sm font-medium">Homely Syariah</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-4 mb-auto">
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Kenaikan Reach</span>
-                                        <span class="font-bold text-green-400">+41,2%</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Total Tayangan</span>
-                                        <span class="font-bold text-white">5.136 Tayangan</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Pasar Baru</span>
-                                        <span class="font-bold text-white">+87%</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Fokus Konversi</span>
-                                        <span class="font-bold text-green-400">Sales</span>
-                                    </div>
-                                </div>
-                                <p class="text-sm text-slate-300 leading-relaxed mt-6">
-                                    Pertumbuhan akun signifikan. Tingginya angka eksposur ke audiens non-pengikut membuktikan keberhasilan menjangkau pelanggan baru.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flip-card-back glass-panel overflow-hidden border border-white/10">
-                            <!-- GANTI LINK IMG DI BAWAH DENGAN SCREENSHOT STATISTIK ASLI ANDA -->
-                            <img src="images/statistik ig mitra.png" alt="Statistik Homely Syariah" class="absolute inset-0 w-full h-full object-cover opacity-40">
-                            <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"></div>
-                            
-                            <div class="relative z-10 h-full flex flex-col items-center justify-center p-6 text-center">
-                                <div class="w-16 h-16 rounded-full bg-teal-500/20 border border-teal-500/50 flex items-center justify-center mb-4">
-                                    <i class="fab fa-instagram text-2xl text-teal-400"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold text-white mb-2">Akun Instagram</h3>
-                                <p class="text-sm text-slate-300 mb-8 font-light">Kunjungi profil untuk detail.</p>
-                                <a href="https://instagram.com/homely_syariah" target="_blank" class="px-6 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-sm text-white font-medium transition-colors flex items-center gap-2">
-                                    <i #></i> Kunjungi Profil
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dibimbing Agency -->
-                <div class="flip-card h-[440px] group reveal-scale">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front glass-panel p-6 shadow-[0_0_30px_rgba(99,102,241,0.15)] overflow-hidden flex flex-col border border-white/10">
-                            <div class="absolute top-5 right-5 flex items-center gap-2 text-white/50 z-20">
-                                <span class="text-[10px] uppercase tracking-widest font-bold opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity"><span class="lg:hidden">Geser &larr;</span><span class="hidden lg:inline">Balik</span></span>
-                                <i class="fas fa-arrows-rotate animate-[spin_4s_linear_infinite] group-hover:text-indigo-400 transition-colors"></i>
-                            </div>
-                            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
-                            <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-50"></div>
-                            
-                            <div class="relative z-10 flex-1 flex flex-col">
-                                <div class="flex justify-between items-start mb-6 pt-2">
-                                    <div class="flex items-center gap-3">
-                                        <img src="images/logo dibimbing.png" alt="Logo Dibimbing Agency" class="w-12 h-12 rounded-full object-cover border border-white/20">
-                                        <div>
-                                            <h3 class="text-xl font-bold text-white">DiBimbing Agency</h3>
-                                            <p class="text-indigo-400 text-sm font-medium">DiBimbing Agency</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-4 mb-auto">
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Reach</span>
-                                        <span class="font-bold text-green-400">+86,6%</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Tayangan</span>
-                                        <span class="font-bold text-white">3.276 Tayangan</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Fokus Konversi</span>
-                                        <span class="font-bold text-green-400">Sales</span>
-                                    </div>
-                                </div>
-                                <p class="text-sm text-slate-300 leading-relaxed mt-6">
-                                    Berkolaborasi merancang strategi konten media sosial untuk klien, memastikan pesan tersampaikan secara kreatif dan efektif.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flip-card-back glass-panel overflow-hidden border border-white/10">
-                            <!-- GANTI LINK IMG DI BAWAH DENGAN SCREENSHOT STATISTIK ASLI ANDA -->
-                            <img src="images/statistik ig mitra.png" alt="Statistik Dibimbing Agency" class="absolute inset-0 w-full h-full object-cover opacity-40">
-                            <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"></div>
-                            
-                            <div class="relative z-10 h-full flex flex-col items-center justify-center p-6 text-center">
-                                <div class="w-16 h-16 rounded-full bg-indigo-500/20 border border-indigo-500/50 flex items-center justify-center mb-4">
-                                    <i class="fab fa-instagram text-2xl text-indigo-400"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold text-white mb-2">Akun Instagram</h3>
-                                <p class="text-sm text-slate-300 mb-8 font-light">Kunjungi profil untuk detail.</p>
-                                <a href="https://www.instagram.com/dibimbing_agency" class="px-6 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-sm text-white font-medium transition-colors flex items-center gap-2">
-                                    <i class="fab fa-instagram"></i> Kunjungi Instagram
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Warung sambal cidero -->
-                 
-                <div class="flip-card h-[440px] group reveal-scale">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front glass-panel p-6 shadow-[0_0_30px_rgba(99,102,241,0.15)] overflow-hidden flex flex-col border border-white/10">
-                            <div class="absolute top-5 right-5 flex items-center gap-2 text-white/50 z-20">
-                                <span class="text-[10px] uppercase tracking-widest font-bold opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity"><span class="lg:hidden">Geser &larr;</span><span class="hidden lg:inline">Balik</span></span>
-                                <i class="fas fa-arrows-rotate animate-[spin_4s_linear_infinite] group-hover:text-red-400 transition-colors"></i>
-                            </div>
-                            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-red-500"></div>
-                            <div class="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-50"></div>
-                            
-                            <div class="relative z-10 flex-1 flex flex-col">
-                                <div class="flex justify-between items-start mb-6 pt-2">
-                                    <div class="flex items-center gap-3">
-                                        <img src="warung sambal cidero/logo cidero.png" alt="Logo Warung Sambel Cidero" class="w-12 h-12 rounded-full object-cover border border-white/20">
-                                        <div>
-                                            <h3 class="text-xl font-bold text-white">Warung Sambal Cidero</h3>
-                                            <p class="text-red-400 text-sm font-regular">Warung Sambal Cidero</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-4 mb-auto">
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Produksi</span>
-                                        <span class="font-bold text-green-400">15 Konten</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Pola Konten</span>
-                                        <span class="font-bold text-white">Storytelling</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Pillar Konten</span>
-                                        <span class="font-bold text-green-400">Awareness</span>
-                                    </div>
-                                </div>
-                                <p class="text-sm text-slate-300 leading-relaxed mt-6">
-                                    Menciptakan konten yang memiliki kualitas dengan pola storytelling dengan tujuan meningkatan brand awareness dan dokumentasi perusahaan.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flip-card-back glass-panel overflow-hidden border border-white/10">
-                            <!-- GANTI LINK IMG DI BAWAH DENGAN SCREENSHOT STATISTIK ASLI ANDA -->
-                            <img src="warung sambal cidero/bg cidero.jpg" alt="Background Warung Sambel Cidero" class="absolute inset-0 w-full h-full object-cover opacity-40">
-                            <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"></div>
-                            
-                            <div class="relative z-10 h-full flex flex-col items-center justify-center p-6 text-center">
-                                <div class="w-16 h-16 rounded-full bg-red-500/20 border border-red-500/50 flex items-center justify-center mb-4">
-                                    <i class="fab fa-whatsapp text-2xl text-red-400"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold text-white mb-2">Whatsapp</h3>
-                                <p class="text-sm text-slate-300 mb-8 font-light">Hubungi untuk kerjasama</p>
-                                <a href="https://wa.me/62895366966056" class="px-6 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-sm text-white font-medium transition-colors flex items-center gap-2">
-                                    <i class="fab fa-whatsapp"></i> Hubungi Sekarang
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Kue Midaya -->
-                 
-                <div class="flip-card h-[440px] group reveal-scale">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front glass-panel p-6 shadow-[0_0_30px_rgba(99,102,241,0.15)] overflow-hidden flex flex-col border border-white/10">
-                            <div class="absolute top-5 right-5 flex items-center gap-2 text-white/50 z-20">
-                                <span class="text-[10px] uppercase tracking-widest font-bold opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity"><span class="lg:hidden">Geser &larr;</span><span class="hidden lg:inline">Balik</span></span>
-                                <i class="fas fa-arrows-rotate animate-[spin_4s_linear_infinite] group-hover:text-indigo-400 transition-colors"></i>
-                            </div>
-                            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
-                            <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-50"></div>
-                            
-                            <div class="relative z-10 flex-1 flex flex-col">
-                                <div class="flex justify-between items-start mb-6 pt-2">
-                                    <div class="flex items-center gap-3">
-                                        <img src="kue midaya/logo midaya.png" alt="Logo Kue Midaya" class="w-12 h-12 rounded-full object-cover border border-white/20">
-                                        <div>
-                                            <h3 class="text-xl font-bold text-white">Kue Midaya</h3>
-                                            <p class="text-indigo-400 text-sm font-regular">Catering & Kue Midaya</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-4 mb-auto">
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Reach</span>
-                                        <span class="font-bold text-green-400">+11,3%</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Engagement</span>
-                                        <span class="font-bold text-green-400">+262,4%</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-white/10 pb-2">
-                                        <span class="text-slate-400 text-sm">Konversi</span>
-                                        <span class="font-bold text-white-400">Selling Product</span>
-                                    </div>
-                                </div>
-                                <p class="text-sm text-slate-300 leading-relaxed mt-6">
-                                    Berkolabori untuk mempertahankan audiens yang ada dan meningkatkan brand awareness dari pola konten entertain (soft seliing).
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flip-card-back glass-panel overflow-hidden border border-white/10">
-                            <!-- GANTI LINK IMG DI BAWAH DENGAN SCREENSHOT STATISTIK ASLI ANDA -->
-                            <img src="kue midaya/bg midaya.jpg" alt="Background Midaya" class="absolute inset-0 w-full h-full object-cover opacity-40">
-                            <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"></div>
-                            
-                            <div class="relative z-10 h-full flex flex-col items-center justify-center p-6 text-center">
-                                <div class="w-16 h-16 rounded-full bg-indigo-500/20 border border-indigo-500/50 flex items-center justify-center mb-4">
-                                    <i class="fab fa-whatsapp text-2xl text-indigo-400"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold text-white mb-2">Instagram</h3>
-                                <p class="text-sm text-slate-300 mb-8 font-light">Kunjungi Profil</p>
-                                <a href="https://www.instagram.com/kuemidaya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="px-6 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-sm text-white font-medium transition-colors flex items-center gap-2">
-                                    <i class="fab fa-instagram"></i> Kunjungi Sekarang
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card h-[440px] group reveal-scale">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front glass-panel p-6 shadow-[0_0_30px_rgba(255,255,255,0.02)] overflow-hidden flex items-center justify-center border border-white/10">
-                            <div class="absolute top-5 right-5 flex items-center gap-2 text-white/30 z-20">
-                                <span class="text-[10px] uppercase tracking-widest font-bold opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity"><span class="lg:hidden">Geser &larr;</span><span class="hidden lg:inline">Balik</span></span>
-                                <i class="fas fa-arrows-rotate animate-[spin_4s_linear_infinite] group-hover:text-slate-400 transition-colors"></i>
-                            </div>
-                            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-slate-600 to-slate-800"></div>
-                            <h3 class="text-2xl text-slate-400 font-bold italic relative z-10 tracking-widest text-center px-4">Collaboration Available</h3>
-                        </div>
-                        <div class="flip-card-back glass-panel overflow-hidden border border-white/10">
-                            <div class="absolute inset-0 bg-slate-900/90 backdrop-blur-sm"></div>
-                            <div class="relative z-10 h-full flex flex-col items-center justify-center p-6 text-center">
-                                <div class="w-16 h-16 rounded-full bg-slate-500/20 border border-slate-500/50 flex items-center justify-center mb-4">
-                                    <i class="fas fa-chart-line text-2xl text-slate-300"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold text-white mb-2">Tingkatkan Omzet</h3>
-                                <p class="text-sm text-slate-300 mb-8 font-light">Ubah pengikut menjadi pelanggan setia. Mari optimalkan interaksi digital akun bisnis Anda mulai hari ini.</p>
-                                <a href="https://wa.me/62895366966056" target="_blank" class="px-6 py-2.5 bg-gradient-to-r from-brand-600 to-blue-600 hover:from-brand-500 hover:to-blue-500 rounded-full text-sm text-white font-medium transition-all flex items-center gap-2 shadow-[0_0_15px_rgba(139,92,246,0.4)] hover:scale-105">
-                                    <i class="fab fa-whatsapp text-lg"></i> Konsultasi Gratis
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div> 
-        </section> 
-
-    <!-- Portfolio Gallery Section -->
-    <section id="portfolio" class="py-24 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="glass-panel p-8 rounded-[2rem] mb-12 flex flex-col items-center text-center relative z-50 reveal-up">
-                <div class="inline-block px-3 py-1 mb-4 border border-white/10 rounded-full bg-white/5 backdrop-blur-sm text-[10px] font-semibold tracking-widest text-emerald-300 uppercase">Portfolio</div>
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">Karya Kreatif</h2>
-                <p class="text-slate-400 max-w-2xl text-lg font-light mb-8">Koleksi konten visual dan video interaktif yang dirancang untuk membangun interaksi audiens. Pilih kategori di bawah ini untuk menyaring karya.</p>
-                
-                <!-- Filters (Sistem Dropdown Bergaya Kaca / iOS) -->
-                <div class="w-full flex flex-col sm:flex-row justify-center items-center gap-4 relative z-40">
-                    
-                    <!-- Dropdown Kategori Konten -->
-                    <div class="relative text-left w-full sm:w-56" id="dropdown-container-type">
-                        <button type="button" class="inline-flex justify-between w-full px-6 py-3 text-sm font-semibold text-white bg-white/5 backdrop-blur-md border border-white/10 rounded-full shadow-md hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-brand-500 items-center gap-3" onclick="toggleDropdown('menu-type')">
-                            <span id="label-type">Semua Konten</span>
-                            <i class="fas fa-chevron-down text-xs transition-transform duration-300" id="icon-type"></i>
-                        </button>
-                        
-                        <div class="absolute left-0 z-50 mt-2 w-full origin-top rounded-2xl glass-panel border border-white/10 shadow-2xl opacity-0 invisible scale-95 transition-all duration-200 transform overflow-hidden" id="menu-type">
-                            <div class="py-2 flex flex-col max-h-60 overflow-y-auto hide-scrollbar">
-                                <button class="text-left px-5 py-2.5 text-sm font-medium text-slate-300 hover:bg-brand-500 hover:text-white transition-colors w-full" onclick="selectFilter('type', 'all', 'Semua Konten')">Semua Konten</button>
-                                <button class="text-left px-5 py-2.5 text-sm font-medium text-slate-300 hover:bg-brand-500 hover:text-white transition-colors w-full" onclick="selectFilter('type', 'design', 'Desain Grafis')">Desain Grafis</button>
-                                <button class="text-left px-5 py-2.5 text-sm font-medium text-slate-300 hover:bg-brand-500 hover:text-white transition-colors w-full" onclick="selectFilter('type', 'poster', 'Poster')">Poster</button>
-                                <button class="text-left px-5 py-2.5 text-sm font-medium text-slate-300 hover:bg-brand-500 hover:text-white transition-colors w-full" onclick="selectFilter('type', 'video', 'Video Konten')">Video Konten</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Dropdown Perusahaan -->
-                    <div class="relative text-left w-full sm:w-64" id="dropdown-container-company">
-                        <button type="button" class="inline-flex justify-between w-full px-6 py-3 text-sm font-semibold text-white bg-white/5 backdrop-blur-md border border-white/10 rounded-full shadow-md hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 items-center gap-3" onclick="toggleDropdown('menu-company')">
-                            <span id="label-company">Semua Klien</span>
-                            <i class="fas fa-chevron-down text-xs transition-transform duration-300" id="icon-company"></i>
-                        </button>
-                        
-                        <div class="absolute left-0 z-50 mt-2 w-full origin-top rounded-2xl glass-panel border border-white/10 shadow-2xl opacity-0 invisible scale-95 transition-all duration-200 transform overflow-hidden" id="menu-company">
-                            <div class="py-2 flex flex-col max-h-60 overflow-y-auto hide-scrollbar">
-                                <button class="text-left px-5 py-2.5 text-sm font-medium text-slate-300 hover:bg-blue-500 hover:text-white transition-colors w-full" onclick="selectFilter('company', 'all', 'Semua Klien')">Semua Klien</button>
-                                <button class="text-left px-5 py-2.5 text-sm font-medium text-slate-300 hover:bg-blue-500 hover:text-white transition-colors w-full" onclick="selectFilter('company', 'telurkita', 'Telur Kita')">Telur Kita</button>
-                                <button class="text-left px-5 py-2.5 text-sm font-medium text-slate-300 hover:bg-blue-500 hover:text-white transition-colors w-full" onclick="selectFilter('company', 'mitramandiri', 'Mitra Mandiri')">Mitra Mandiri</button>
-                                <button class="text-left px-5 py-2.5 text-sm font-medium text-slate-300 hover:bg-blue-500 hover:text-white transition-colors w-full" onclick="selectFilter('company', 'ortidjoe', 'Ortidjoe Bakery')">Ortidjoe Bakery</button>
-                                <button class="text-left px-5 py-2.5 text-sm font-medium text-slate-300 hover:bg-blue-500 hover:text-white transition-colors w-full" onclick="selectFilter('company', 'oase', 'Oase Cafe')">Oase Cafe</button>
-                                <button class="text-left px-5 py-2.5 text-sm font-medium text-slate-300 hover:bg-blue-500 hover:text-white transition-colors w-full" onclick="selectFilter('company', 'homely', 'Homely Syariah')">Homely Syariah</button>
-                                <button class="text-left px-5 py-2.5 text-sm font-medium text-slate-300 hover:bg-blue-500 hover:text-white transition-colors w-full" onclick="selectFilter('company', 'dibimbing', 'DiBimbing Agency')">DiBimbing Agency</button>
-                                <button class="text-left px-5 py-2.5 text-sm font-medium text-slate-300 hover:bg-blue-500 hover:text-white transition-colors w-full" onclick="selectFilter('company', 'cidero', 'Warung Sambal Cidero')">Warung Sambal Cidero</button>
-                                <button class="text-left px-5 py-2.5 text-sm font-medium text-slate-300 hover:bg-blue-500 hover:text-white transition-colors w-full" onclick="selectFilter('company', 'midaya', 'Kue Midaya')">Kue Midaya</button>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
             </div>

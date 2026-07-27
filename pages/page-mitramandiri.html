@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - mitramandiri</title>
+    <title>Portfolio - Mitra Mandiri</title>
     <!-- CDN Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { background-color: #f8fafc; } /* bg-slate-50 */
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-red-500 selection:text-white">
+<body class="text-slate-800 font-sans antialiased selection:bg-red-500 selection:text-white">
 
     <!-- Navbar / Tombol Kembali -->
     <nav class="fixed w-full z-50 top-0 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Ubah index.html jika nama file utama Anda berbeda -->
                 <a href="../index.html" class="flex items-center gap-2 text-slate-600 hover:text-red-600 font-medium transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
@@ -24,7 +21,7 @@
                     <span>Kembali</span>
                 </a>
                 <div class="text-xl font-bold tracking-tight uppercase text-slate-900">
-                    Mitra Mandiri
+                    Mitra Mandiri 
                 </div>
             </div>
         </div>
@@ -44,257 +41,166 @@
     <section class="py-12 relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- Grid Karya -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Grid Karya: Mengubah gap-6 menjadi gap-4 agar jarak lebih rapat -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 
                 <!-- Item Karya 1 -->
-<div class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
-    <img src="telurkita/design grafis/design telurkita 1.png" alt="Karya 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-    
-    <!-- Overlay terang: menyesuaikan dengan background putih -->
-    <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"></div>
-    
-    <!-- Konten Teks & Tombol -->
-    <div class="absolute bottom-0 left-0 p-6 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-full">
-        <h4 class="text-lg font-bold text-slate-900">Desain Edukasi</h4>
-        <p class="text-sm text-slate-600 mb-4">Instagram Feed</p>
-        
-        <!-- Tombol Link Google Drive -->
-        <a href="LINK_GDRIVE_ANDA_DISINI" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors w-max">
-            Detail
-            <!-- Ikon eksternal link -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-            </svg>
-        </a>
-    </div>
-</div>
+                <div tabindex="0" class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl focus:shadow-xl transition-all duration-300 outline-none cursor-pointer">
+                    <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 1.svg" alt="Karya 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus:scale-105 group-focus-within:scale-105">
+                    <div class="absolute inset-0 bg-white/70 backdrop-blur-[2px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-300 flex items-center justify-center">
+                        <a href="https://drive.google.com/file/d/185mH8xePhUZs2QhAz2K1njuNAtht8lb1/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors shadow-lg scale-95 group-hover:scale-100 group-focus:scale-100 group-focus-within:scale-100 duration-300">
+                            Detail
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                        </a>
+                    </div>
+                </div>
 
                 <!-- Item Karya 2 -->
-<div class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
-    <img src="telurkita/design grafis/design telurkita 1.png" alt="Karya 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-    
-    <!-- Overlay terang: menyesuaikan dengan background putih -->
-    <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"></div>
-    
-    <!-- Konten Teks & Tombol -->
-    <div class="absolute bottom-0 left-0 p-6 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-full">
-        <h4 class="text-lg font-bold text-slate-900">Desain Edukasi</h4>
-        <p class="text-sm text-slate-600 mb-4">Instagram Feed</p>
-        
-        <!-- Tombol Link Google Drive -->
-        <a href="LINK_GDRIVE_ANDA_DISINI" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors w-max">
-            Detail
-            <!-- Ikon eksternal link -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-            </svg>
-        </a>
-    </div>
-</div>
+                <div tabindex="0" class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl focus:shadow-xl transition-all duration-300 outline-none cursor-pointer">
+                    <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 2.svg" alt="Karya 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus:scale-105 group-focus-within:scale-105">
+                    <div class="absolute inset-0 bg-white/70 backdrop-blur-[2px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-300 flex items-center justify-center">
+                        <a href="https://drive.google.com/file/d/10X6vG9cyYhyGo1gz3ntQpaaQBf9_SAJs/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors shadow-lg scale-95 group-hover:scale-100 group-focus:scale-100 group-focus-within:scale-100 duration-300">
+                            Detail
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                        </a>
+                    </div>
+                </div>
 
                 <!-- Item Karya 3 -->
-<div class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
-    <img src="telurkita/design grafis/design telurkita 1.png" alt="Karya 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-    
-    <!-- Overlay terang: menyesuaikan dengan background putih -->
-    <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"></div>
-    
-    <!-- Konten Teks & Tombol -->
-    <div class="absolute bottom-0 left-0 p-6 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-full">
-        <h4 class="text-lg font-bold text-slate-900">Desain Edukasi</h4>
-        <p class="text-sm text-slate-600 mb-4">Instagram Feed</p>
-        
-        <!-- Tombol Link Google Drive -->
-        <a href="LINK_GDRIVE_ANDA_DISINI" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors w-max">
-            Detail
-            <!-- Ikon eksternal link -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-            </svg>
-        </a>
-    </div>
-</div>
+                <div tabindex="0" class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl focus:shadow-xl transition-all duration-300 outline-none cursor-pointer">
+                    <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 3.svg" alt="Karya 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus:scale-105 group-focus-within:scale-105">
+                    <div class="absolute inset-0 bg-white/70 backdrop-blur-[2px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-300 flex items-center justify-center">
+                        <a href="https://drive.google.com/file/d/1M-yZtU6uR4UL-8Dzm919P2hmRY7YbUXO/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors shadow-lg scale-95 group-hover:scale-100 group-focus:scale-100 group-focus-within:scale-100 duration-300">
+                            Detail
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                        </a>
+                    </div>
+                </div>
 
                 <!-- Item Karya 4 -->
-<div class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
-    <img src="telurkita/design grafis/design telurkita 1.png" alt="Karya 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-    
-    <!-- Overlay terang: menyesuaikan dengan background putih -->
-    <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"></div>
-    
-    <!-- Konten Teks & Tombol -->
-    <div class="absolute bottom-0 left-0 p-6 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-full">
-        <h4 class="text-lg font-bold text-slate-900">Desain Edukasi</h4>
-        <p class="text-sm text-slate-600 mb-4">Instagram Feed</p>
-        
-        <!-- Tombol Link Google Drive -->
-        <a href="LINK_GDRIVE_ANDA_DISINI" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors w-max">
-            Detail
-            <!-- Ikon eksternal link -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-            </svg>
-        </a>
-    </div>
-</div>
+                <div tabindex="0" class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl focus:shadow-xl transition-all duration-300 outline-none cursor-pointer">
+                    <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 4.svg" alt="Karya 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus:scale-105 group-focus-within:scale-105">
+                    <div class="absolute inset-0 bg-white/70 backdrop-blur-[2px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-300 flex items-center justify-center">
+                        <a href="https://drive.google.com/file/d/1yEasWHxSCKfFuZ4A8dAQndqTz3M_erFV/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors shadow-lg scale-95 group-hover:scale-100 group-focus:scale-100 group-focus-within:scale-100 duration-300">
+                            Detail
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                        </a>
+                    </div>
+                </div>
 
-<!-- Item Karya 5 -->
-<div class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
-    <img src="telurkita/design grafis/design telurkita 1.png" alt="Karya 5" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-    
-    <!-- Overlay terang: menyesuaikan dengan background putih -->
-    <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"></div>
-    
-    <!-- Konten Teks & Tombol -->
-    <div class="absolute bottom-0 left-0 p-6 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-full">
-        <h4 class="text-lg font-bold text-slate-900">Desain Edukasi</h4>
-        <p class="text-sm text-slate-600 mb-4">Instagram Feed</p>
-        
-        <!-- Tombol Link Google Drive -->
-        <a href="LINK_GDRIVE_ANDA_DISINI" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors w-max">
-            Detail
-            <!-- Ikon eksternal link -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-            </svg>
-        </a>
-    </div>
-</div>
+                <!-- Item Karya 5 -->
+                <div tabindex="0" class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl focus:shadow-xl transition-all duration-300 outline-none cursor-pointer">
+                    <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 5.svg" alt="Karya 5" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus:scale-105 group-focus-within:scale-105">
+                    <div class="absolute inset-0 bg-white/70 backdrop-blur-[2px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-300 flex items-center justify-center">
+                        <a href="https://drive.google.com/file/d/1dgRww_4uWBhSIe2TCp-eMiT06yVd3_Vi/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors shadow-lg scale-95 group-hover:scale-100 group-focus:scale-100 group-focus-within:scale-100 duration-300">
+                            Detail
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                        </a>
+                    </div>
+                </div>
 
-<!-- Item Karya 6 -->
-<div class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
-    <img src="telurkita/design grafis/design telurkita 1.png" alt="Karya 6" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-    
-    <!-- Overlay terang: menyesuaikan dengan background putih -->
-    <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"></div>
-    
-    <!-- Konten Teks & Tombol -->
-    <div class="absolute bottom-0 left-0 p-6 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-full">
-        <h4 class="text-lg font-bold text-slate-900">Desain Edukasi</h4>
-        <p class="text-sm text-slate-600 mb-4">Instagram Feed</p>
-        
-        <!-- Tombol Link Google Drive -->
-        <a href="LINK_GDRIVE_ANDA_DISINI" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors w-max">
-            Detail
-            <!-- Ikon eksternal link -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-            </svg>
-        </a>
-    </div>
-</div>
+                <!-- Item Karya 6 -->
+                <div tabindex="0" class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl focus:shadow-xl transition-all duration-300 outline-none cursor-pointer">
+                    <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 6.svg" alt="Karya 6" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus:scale-105 group-focus-within:scale-105">
+                    <div class="absolute inset-0 bg-white/70 backdrop-blur-[2px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-300 flex items-center justify-center">
+                        <a href="https://drive.google.com/file/d/1yUbN3OQ3XV-hc-OSv8pPtYERaCO47GJ7/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors shadow-lg scale-95 group-hover:scale-100 group-focus:scale-100 group-focus-within:scale-100 duration-300">
+                            Detail
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                        </a>
+                    </div>
+                </div>
 
-<!-- Item Karya 7 -->
-<div class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
-    <img src="telurkita/design grafis/design telurkita 1.png" alt="Karya 7" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-    
-    <!-- Overlay terang: menyesuaikan dengan background putih -->
-    <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"></div>
-    
-    <!-- Konten Teks & Tombol -->
-    <div class="absolute bottom-0 left-0 p-6 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-full">
-        <h4 class="text-lg font-bold text-slate-900">Desain Edukasi</h4>
-        <p class="text-sm text-slate-600 mb-4">Instagram Feed</p>
-        
-        <!-- Tombol Link Google Drive -->
-        <a href="LINK_GDRIVE_ANDA_DISINI" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors w-max">
-            Detail
-            <!-- Ikon eksternal link -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-            </svg>
-        </a>
-    </div>
-</div>
+                <!-- Item Karya 7 -->
+                <div tabindex="0" class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl focus:shadow-xl transition-all duration-300 outline-none cursor-pointer">
+                    <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 7.svg" alt="Karya 7" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus:scale-105 group-focus-within:scale-105">
+                    <div class="absolute inset-0 bg-white/70 backdrop-blur-[2px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-300 flex items-center justify-center">
+                        <a href="https://drive.google.com/file/d/1fUaT4obC0yN2VFIZ2viRAp46z6ltW9cP/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors shadow-lg scale-95 group-hover:scale-100 group-focus:scale-100 group-focus-within:scale-100 duration-300">
+                            Detail
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                        </a>
+                    </div>
+                </div>
 
-<!-- Item Karya 8 -->
-<div class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
-    <img src="telurkita/design grafis/design telurkita 1.png" alt="Karya 8" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-    
-    <!-- Overlay terang: menyesuaikan dengan background putih -->
-    <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"></div>
-    
-    <!-- Konten Teks & Tombol -->
-    <div class="absolute bottom-0 left-0 p-6 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-full">
-        <h4 class="text-lg font-bold text-slate-900">Desain Edukasi</h4>
-        <p class="text-sm text-slate-600 mb-4">Instagram Feed</p>
-        
-        <!-- Tombol Link Google Drive -->
-        <a href="LINK_GDRIVE_ANDA_DISINI" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors w-max">
-            Detail
-            <!-- Ikon eksternal link -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-            </svg>
-        </a>
-    </div>
-</div>
+                <!-- Item Karya 8 -->
+                <div tabindex="0" class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl focus:shadow-xl transition-all duration-300 outline-none cursor-pointer">
+                    <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 8.svg" alt="Karya 8" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus:scale-105 group-focus-within:scale-105">
+                    <div class="absolute inset-0 bg-white/70 backdrop-blur-[2px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-300 flex items-center justify-center">
+                        <a href="https://drive.google.com/file/d/1XOUKbGHAE_UX_PtXuTFZfmJ2Msrf2tnp/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors shadow-lg scale-95 group-hover:scale-100 group-focus:scale-100 group-focus-within:scale-100 duration-300">
+                            Detail
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                        </a>
+                    </div>
+                </div>
 
-<!-- Item Karya 9 -->
-<div class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
-    <img src="telurkita/design grafis/design telurkita 1.png" alt="Karya 9" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-    
-    <!-- Overlay terang: menyesuaikan dengan background putih -->
-    <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"></div>
-    
-    <!-- Konten Teks & Tombol -->
-    <div class="absolute bottom-0 left-0 p-6 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-full">
-        <h4 class="text-lg font-bold text-slate-900">Desain Edukasi</h4>
-        <p class="text-sm text-slate-600 mb-4">Instagram Feed</p>
-        
-        <!-- Tombol Link Google Drive -->
-        <a href="LINK_GDRIVE_ANDA_DISINI" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors w-max">
-            Detail
-            <!-- Ikon eksternal link -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-            </svg>
-        </a>
-    </div>
-</div>
+                <!-- Item Karya 9 -->
+                <div tabindex="0" class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl focus:shadow-xl transition-all duration-300 outline-none cursor-pointer">
+                    <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 9.svg" alt="Karya 9" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus:scale-105 group-focus-within:scale-105">
+                    <div class="absolute inset-0 bg-white/70 backdrop-blur-[2px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-300 flex items-center justify-center">
+                        <a href="https://drive.google.com/file/d/19VUWFnZ0-IJeXilzmctAWoZVHEI_4N56/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors shadow-lg scale-95 group-hover:scale-100 group-focus:scale-100 group-focus-within:scale-100 duration-300">
+                            Detail
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                        </a>
+                    </div>
+                </div>
 
-<!-- Item Karya 10 -->
-<div class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
-    <img src="telurkita/design grafis/design telurkita 1.png" alt="Karya 10" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-    
-    <!-- Overlay terang: menyesuaikan dengan background putih -->
-    <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"></div>
-    
-    <!-- Konten Teks & Tombol -->
-    <div class="absolute bottom-0 left-0 p-6 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-full">
-        <h4 class="text-lg font-bold text-slate-900">Desain Edukasi</h4>
-        <p class="text-sm text-slate-600 mb-4">Instagram Feed</p>
-        
-        <!-- Tombol Link Google Drive -->
-        <a href="LINK_GDRIVE_ANDA_DISINI" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors w-max">
-            Detail
-            <!-- Ikon eksternal link -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-            </svg>
-        </a>
-    </div>
-</div>
+                <!-- Item Karya 10 -->
+                <div tabindex="0" class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl focus:shadow-xl transition-all duration-300 outline-none cursor-pointer">
+                    <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 10.svg" alt="Karya 10" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus:scale-105 group-focus-within:scale-105">
+                    <div class="absolute inset-0 bg-white/70 backdrop-blur-[2px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-300 flex items-center justify-center">
+                        <a href="https://drive.google.com/file/d/1ubPXvWG0Q4omw5y3WABQeCNuBDuphqGT/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors shadow-lg scale-95 group-hover:scale-100 group-focus:scale-100 group-focus-within:scale-100 duration-300">
+                            Detail
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item Karya 11 -->
+                <div tabindex="0" class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl focus:shadow-xl transition-all duration-300 outline-none cursor-pointer">
+                    <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 11.svg" alt="Karya 11" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus:scale-105 group-focus-within:scale-105">
+                    <div class="absolute inset-0 bg-white/70 backdrop-blur-[2px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-300 flex items-center justify-center">
+                        <a href="https://drive.google.com/file/d/1k9C7kLnQoT2dQU9EW_630D9wFpqHv_Of/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors shadow-lg scale-95 group-hover:scale-100 group-focus:scale-100 group-focus-within:scale-100 duration-300">
+                            Detail
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item Karya 12 -->
+                <div tabindex="0" class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl focus:shadow-xl transition-all duration-300 outline-none cursor-pointer">
+                    <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 12.svg" alt="Karya 12" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus:scale-105 group-focus-within:scale-105">
+                    <div class="absolute inset-0 bg-white/70 backdrop-blur-[2px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-300 flex items-center justify-center">
+                        <a href="https://drive.google.com/file/d/12vN3pNUUtX4RUtMzcjZQxbzccHCqmGu7/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors shadow-lg scale-95 group-hover:scale-100 group-focus:scale-100 group-focus-within:scale-100 duration-300">
+                            Detail
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item Karya 13 -->
+                <div tabindex="0" class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl focus:shadow-xl transition-all duration-300 outline-none cursor-pointer">
+                    <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 13.svg" alt="Karya 12" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus:scale-105 group-focus-within:scale-105">
+                    <div class="absolute inset-0 bg-white/70 backdrop-blur-[2px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-300 flex items-center justify-center">
+                        <a href="https://drive.google.com/file/d/1wVVYHyiV8gP74Gwpsxo_YOL_Bv4LTeQ9/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors shadow-lg scale-95 group-hover:scale-100 group-focus:scale-100 group-focus-within:scale-100 duration-300">
+                            Detail
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item Karya 14 -->
+                <div tabindex="0" class="group relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-white shadow-sm hover:shadow-xl focus:shadow-xl transition-all duration-300 outline-none cursor-pointer">
+                    <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 14.svg" alt="Karya 12" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus:scale-105 group-focus-within:scale-105">
+                    <div class="absolute inset-0 bg-white/70 backdrop-blur-[2px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-300 flex items-center justify-center">
+                        <a href="https://drive.google.com/file/d/1tV3PzOAob2QoZ-sksDkyqyGLZuodQ2HU/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors shadow-lg scale-95 group-hover:scale-100 group-focus:scale-100 group-focus-within:scale-100 duration-300">
+                            Detail
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                        </a>
+                    </div>
+                </div>
 
             </div>
         </div>
     </section>
-
-    <!-- Footer Simple -->
-    <footer class="py-8 text-center border-t border-slate-200 mt-12 bg-white">
-        <p class="text-slate-500 text-sm">&copy; 2026 Portfolio. All rights reserved.</p>
-    </footer>
 
 </body>
 </html>

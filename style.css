@@ -1,0 +1,4 @@
+/* Mengatur warna background dasar halaman */
+body { 
+    background-color: #f8fafc; /* Setara dengan class bg-slate-50 di Tailwind */
+}

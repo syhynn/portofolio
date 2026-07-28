@@ -327,17 +327,24 @@
     </section>
 
     <!-- Portfolio Gallery Section (Per Brand Layout) -->
-    <section id="portfolio" class="py-24 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="portfolio" class="portfolio-section py-24 relative z-10 overflow-hidden">
+        
+        <!-- Ambient Glow Background untuk membedakan area portofolio -->
+        <div class="absolute inset-0 z-0 pointer-events-none opacity-40">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[500px] bg-brand-600/20 rounded-full blur-[140px]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
             <!-- Header Section -->
             <div class="text-center mb-16 relative z-50 reveal-up">
-                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-black mb-4">Karya Kreatif</h2>
-                <p class="text-black-400 max-w-2xl mx-auto text-lg font-regular">Pilih brand di bawah ini untuk melihat detail lengkap portofolio dan hasil karya kami.</p>
+                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4">Karya Kreatif</h2>
+                <p class="text-slate-300 max-w-2xl mx-auto text-lg font-regular">Pilih brand di bawah ini untuk melihat detail lengkap portofolio dan hasil karya kami.</p>
             </div>
 
             <!-- Grid Kolom Per Brand -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
                 
                 <!-- Brand 1: Telur Kita -->
                 <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col hover:-translate-y-2 transition-all duration-300 shadow-lg reveal-up">
@@ -361,9 +368,9 @@
                         <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/JUDUL.svg" alt="Mitra Mandiri" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold text-black mb-3">Mitra Mandiri</h3>
-                        <p class="text-black-400 text-sm mb-6 flex-grow leading-relaxed">
-                            Mitra Mandiri adalah perusahaan yang bergerak di bidang elektronik seperti komputer, Laptop dan Aksesoris di Pusat Kota Kediri. Saya pernah bekerja sama dengan Mitra Mandiri untuk menciptakan desain grafis yang menarik dan efektif dalam mempromosikan produk mereka.
+                        <h3 class="text-2xl font-bold text-white mb-3">Mitra Mandiri</h3>
+                        <p class="text-white-400 text-white mb-6 flex-grow leading-relaxed">
+                            Mitra Mandiri adalah perusahaan yang bergerak di bidang elektronik seperti komputer, Laptop dan Aksesoris di Pusat Kota Kediri. Saya pernah bekerja sama dengan Mitra Mandiri untuk menciptakan desain grafis yang menarik dan efektif dalam mempromosikan produk.
                         </p>
                         <a href="pages/page-mitramandiri.html" class="inline-block text-center w-full px-4 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition-colors duration-300">
                             Lihat Selengkapnya
@@ -377,8 +384,8 @@
                         <img src="/UPDATE/PORTOFOLIO/OASE/JUDUL.svg" alt="Oase Cafe" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold text-black mb-3">Oase Cafe</h3>
-                        <p class="text-black-400 text-sm mb-6 flex-grow leading-relaxed">
+                        <h3 class="text-2xl font-bold text-white mb-3">Oase Cafe</h3>
+                        <p class="text-white-400 text-white mb-6 flex-grow leading-relaxed">
                             Oase Cafe adalah sebuah kedai makan yang menawarkan makanan dengan signature dish "Ayam Tempong khas Banyuwangi" yang berlokasi di Pesantren Kota Kediri.
                         </p>
                         <a href="pages/page-oase.html" class="inline-block text-center w-full px-4 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-xl transition-colors duration-300">

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mitra Mandiri</title>
+    
+    <!-- CDN Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Custom CSS Integrasi -->
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+
+        /* Enhanced Glassmorphism Panel */
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.7) 100%);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(16px);
+        }
+
+        /* Glass Hover Effect for Small Items */
+        .glass-tag {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-tag:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #a855f7, #3b82f6, #10b981);
+            background-size: 200% auto;
+            animation: shine 5s linear infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+        }
+
+        /* Animated Blob Backgrounds */
+        .bg-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+            opacity: 0.4;
+            mix-blend-mode: multiply;
+            transition: transform 0.1s ease-out;
+        }
+
+        /* Hide Scrollbar for aesthetic slider */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* 3D Flip Card CSS */
+        .flip-card {
+            perspective: 1000px;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+
+        /* Mode Desktop: Menggunakan Hover */
+        @media (hover: hover) and (pointer: fine) {
+            .flip-card:hover .flip-card-inner {
+                transform: rotateY(180deg);
+            }
+        }
+
+        /* Mode Mobile: Menggunakan class tambahan dari JS */
+        .flip-card.is-flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+            border-radius: 1.5rem; /* rounded-3xl */
+        }
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+
+        /* --- ANIMASI SCROLL INTERAKTIF --- */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(80px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.9) translateY(40px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-visible {
+            opacity: 1 !important;
+            transform: translateY(0) scale(1) !important;
+        }
+        @keyframes autoBlurReveal {
+            0% { opacity: 0; filter: blur(20px); transform: translateY(40px) scale(0.95); }
+            100% { opacity: 1; filter: blur(0px); transform: translateY(0) scale(1); }
+        }
+        .hero-animate {
+            animation: autoBlurReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+        .d-100 { animation-delay: 100ms; }
+        .d-300 { animation-delay: 300ms; }
+        .d-500 { animation-delay: 500ms; }
+        .d-700 { animation-delay: 700ms; }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-red-500 selection:text-white relative">
+
+    <!-- Ornamen Latar Belakang (Animated Blobs) -->
+    <div class="bg-blob bg-purple-300 w-96 h-96 top-0 left-[-10%]"></div>
+    <div class="bg-blob bg-blue-300 w-96 h-96 top-[30%] right-[-5%]"></div>
+    <div class="bg-blob bg-emerald-300 w-[30rem] h-[30rem] bottom-[10%] left-[20%]"></div>
+
+    <!-- Navbar / Tombol Kembali -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 glass-panel">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="../index.html" class="flex items-center gap-2 text-slate-600 hover:text-red-600 font-medium transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                    </svg>
+                    <span>Kembali</span>
+                </a>
+                <div class="text-xl font-bold tracking-tight uppercase text-slate-900">
+                    Mitra Mandiri 
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-36 pb-12 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center hero-animate">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 gradient-text">Portofolio</h1>
+            <p class="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">
+                Di bawah ini adalah seluruh hasil karya desain grafis, konten media sosial.
+            </p>
+        </div>
+    </section>
+
+    <!-- Full Gallery Section -->
+    <section class="py-12 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Grid Karya -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                
+                <!-- Item Karya 1 -->
+                <div tabindex="0" class="flip-card aspect-[4/5] w-full cursor-pointer reveal-up">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-white shadow-sm overflow-hidden">
+                            <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 1.svg" alt="Karya 1" class="h-full w-full object-cover">
+                        </div>
+                        <div class="flip-card-back glass-panel flex items-center justify-center shadow-xl">
+                            <a href="https://drive.google.com/file/d/185mH8xePhUZs2QhAz2K1njuNAtht8lb1/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 active:scale-95">
+                                <span>Detail</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item Karya 2 -->
+                <div tabindex="0" class="flip-card aspect-[4/5] w-full cursor-pointer reveal-up d-100">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-white shadow-sm overflow-hidden">
+                            <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 2.svg" alt="Karya 2" class="h-full w-full object-cover">
+                        </div>
+                        <div class="flip-card-back glass-panel flex items-center justify-center shadow-xl">
+                            <a href="https://drive.google.com/file/d/10X6vG9cyYhyGo1gz3ntQpaaQBf9_SAJs/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 active:scale-95">
+                                <span>Detail</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item Karya 3 -->
+                <div tabindex="0" class="flip-card aspect-[4/5] w-full cursor-pointer reveal-up d-300">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-white shadow-sm overflow-hidden">
+                            <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 3.svg" alt="Karya 3" class="h-full w-full object-cover">
+                        </div>
+                        <div class="flip-card-back glass-panel flex items-center justify-center shadow-xl">
+                            <a href="https://drive.google.com/file/d/1M-yZtU6uR4UL-8Dzm919P2hmRY7YbUXO/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 active:scale-95">
+                                <span>Detail</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item Karya 4 -->
+                <div tabindex="0" class="flip-card aspect-[4/5] w-full cursor-pointer reveal-up d-500">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-white shadow-sm overflow-hidden">
+                            <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 4.svg" alt="Karya 4" class="h-full w-full object-cover">
+                        </div>
+                        <div class="flip-card-back glass-panel flex items-center justify-center shadow-xl">
+                            <a href="https://drive.google.com/file/d/1yEasWHxSCKfFuZ4A8dAQndqTz3M_erFV/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 active:scale-95">
+                                <span>Detail</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item Karya 5 -->
+                <div tabindex="0" class="flip-card aspect-[4/5] w-full cursor-pointer reveal-up">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-white shadow-sm overflow-hidden">
+                            <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 5.svg" alt="Karya 5" class="h-full w-full object-cover">
+                        </div>
+                        <div class="flip-card-back glass-panel flex items-center justify-center shadow-xl">
+                            <a href="https://drive.google.com/file/d/1dgRww_4uWBhSIe2TCp-eMiT06yVd3_Vi/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 active:scale-95">
+                                <span>Detail</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item Karya 6 -->
+                <div tabindex="0" class="flip-card aspect-[4/5] w-full cursor-pointer reveal-up d-100">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-white shadow-sm overflow-hidden">
+                            <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 6.svg" alt="Karya 6" class="h-full w-full object-cover">
+                        </div>
+                        <div class="flip-card-back glass-panel flex items-center justify-center shadow-xl">
+                            <a href="https://drive.google.com/file/d/1yUbN3OQ3XV-hc-OSv8pPtYERaCO47GJ7/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 active:scale-95">
+                                <span>Detail</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item Karya 7 -->
+                <div tabindex="0" class="flip-card aspect-[4/5] w-full cursor-pointer reveal-up d-300">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-white shadow-sm overflow-hidden">
+                            <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 7.svg" alt="Karya 7" class="h-full w-full object-cover">
+                        </div>
+                        <div class="flip-card-back glass-panel flex items-center justify-center shadow-xl">
+                            <a href="https://drive.google.com/file/d/1fUaT4obC0yN2VFIZ2viRAp46z6ltW9cP/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 active:scale-95">
+                                <span>Detail</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item Karya 8 -->
+                <div tabindex="0" class="flip-card aspect-[4/5] w-full cursor-pointer reveal-up d-500">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-white shadow-sm overflow-hidden">
+                            <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 8.svg" alt="Karya 8" class="h-full w-full object-cover">
+                        </div>
+                        <div class="flip-card-back glass-panel flex items-center justify-center shadow-xl">
+                            <a href="https://drive.google.com/file/d/1XOUKbGHAE_UX_PtXuTFZfmJ2Msrf2tnp/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 active:scale-95">
+                                <span>Detail</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item Karya 9 -->
+                <div tabindex="0" class="flip-card aspect-[4/5] w-full cursor-pointer reveal-up">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-white shadow-sm overflow-hidden">
+                            <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 9.svg" alt="Karya 9" class="h-full w-full object-cover">
+                        </div>
+                        <div class="flip-card-back glass-panel flex items-center justify-center shadow-xl">
+                            <a href="https://drive.google.com/file/d/19VUWFnZ0-IJeXilzmctAWoZVHEI_4N56/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 active:scale-95">
+                                <span>Detail</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item Karya 10 -->
+                <div tabindex="0" class="flip-card aspect-[4/5] w-full cursor-pointer reveal-up d-100">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-white shadow-sm overflow-hidden">
+                            <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 10.svg" alt="Karya 10" class="h-full w-full object-cover">
+                        </div>
+                        <div class="flip-card-back glass-panel flex items-center justify-center shadow-xl">
+                            <a href="https://drive.google.com/file/d/1ubPXvWG0Q4omw5y3WABQeCNuBDuphqGT/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 active:scale-95">
+                                <span>Detail</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item Karya 11 -->
+                <div tabindex="0" class="flip-card aspect-[4/5] w-full cursor-pointer reveal-up d-300">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-white shadow-sm overflow-hidden">
+                            <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 11.svg" alt="Karya 11" class="h-full w-full object-cover">
+                        </div>
+                        <div class="flip-card-back glass-panel flex items-center justify-center shadow-xl">
+                            <a href="https://drive.google.com/file/d/1k9C7kLnQoT2dQU9EW_630D9wFpqHv_Of/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 active:scale-95">
+                                <span>Detail</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item Karya 12 -->
+                <div tabindex="0" class="flip-card aspect-[4/5] w-full cursor-pointer reveal-up d-500">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-white shadow-sm overflow-hidden">
+                            <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 12.svg" alt="Karya 12" class="h-full w-full object-cover">
+                        </div>
+                        <div class="flip-card-back glass-panel flex items-center justify-center shadow-xl">
+                            <a href="https://drive.google.com/file/d/12vN3pNUUtX4RUtMzcjZQxbzccHCqmGu7/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 active:scale-95">
+                                <span>Detail</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item Karya 13 -->
+                <div tabindex="0" class="flip-card aspect-[4/5] w-full cursor-pointer reveal-up">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-white shadow-sm overflow-hidden">
+                            <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 13.svg" alt="Karya 13" class="h-full w-full object-cover">
+                        </div>
+                        <div class="flip-card-back glass-panel flex items-center justify-center shadow-xl">
+                            <a href="https://drive.google.com/file/d/1wVVYHyiV8gP74Gwpsxo_YOL_Bv4LTeQ9/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 active:scale-95">
+                                <span>Detail</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item Karya 14 -->
+                <div tabindex="0" class="flip-card aspect-[4/5] w-full cursor-pointer reveal-up d-100">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-white shadow-sm overflow-hidden">
+                            <img src="/UPDATE/PORTOFOLIO/MITRA MANDIRI/GAMBAR 14.svg" alt="Karya 14" class="h-full w-full object-cover">
+                        </div>
+                        <div class="flip-card-back glass-panel flex items-center justify-center shadow-xl">
+                            <a href="https://drive.google.com/file/d/1tV3PzOAob2QoZ-sksDkyqyGLZuodQ2HU/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 active:scale-95">
+                                <span>Detail</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Script Interaktif untuk Scroll Animasi dan Mobile Flip -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. Intersection Observer untuk memicu class '.reveal-visible' ketika elemen masuk layar
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-visible');
+                        // Opsional: unobserve jika ingin animasi hanya berjalan sekali
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal-up, .reveal-scale');
+            revealElements.forEach(el => observer.observe(el));
+
+            // 2. Event Listener untuk interaksi klik/sentuh (terutama berguna untuk mobile) 
+            // agar menambahkan '.is-flipped' ke kartu.
+            const flipCards = document.querySelectorAll('.flip-card');
+            flipCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // Toggle class pada elemen flip-card
+                    this.classList.toggle('is-flipped');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

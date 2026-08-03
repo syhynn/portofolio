@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sedang Dalam Perbaikan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Pengaturan Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #222222; /* Warna gelap khas website Anda */
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Latar Belakang Gradasi Halus */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #212020 0%, #1a1818 70%);
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        .maintenance-container {
+            max-width: 600px;
+            padding: 40px 20px;
+            z-index: 1;
+        }
+
+        /* --- BAGIAN ANIMASI KARTUN --- */
+        .cartoon-wrapper {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Animasi Mengambang */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Animasi Tetesan Air Mata */
+        .tear {
+            animation: cry 2s infinite linear;
+            opacity: 0;
+            transform-origin: top;
+        }
+
+        @keyframes cry {
+            0% { transform: translateY(0) scale(0.5); opacity: 0; }
+            30% { transform: translateY(10px) scale(1); opacity: 1; }
+            80% { transform: translateY(30px) scale(0.8); opacity: 0; }
+            100% { transform: translateY(30px) scale(0); opacity: 0; }
+        }
+
+        /* --- Papan Rusak (Mengayun) --- */
+        .broken-sign {
+            display: inline-block;
+            background-color: #e61d25;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            position: relative;
+            transform-origin: top left;
+            animation: swing 4s ease-in-out infinite;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .broken-sign::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 10px;
+            width: 4px;
+            height: 15px;
+            background-color: #cbd5e1;
+        }
+
+        @keyframes swing {
+            0% { transform: rotate(10deg); }
+            50% { transform: rotate(20deg); }
+            100% { transform: rotate(10deg); }
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1 {
+            font-size: 2.8rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        h1 span {
+            color: #dcf93a; /* Warna aksen kuning website Anda */
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        /* --- TOMBOL KEMBALI --- */
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: transparent;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 30px;
+            border-radius: 50px;
+            border: 2px solid #e61d25;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #e61d25;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(230, 29, 37, 0.4);
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            p { font-size: 1rem; }
+            .cartoon-wrapper { width: 120px; height: 120px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="maintenance-container">
+        
+        <!-- Animasi Kartun Sedih (SVG) -->
+        <div class="cartoon-wrapper">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Wajah (Kuning Pucat) -->
+                <circle cx="50" cy="50" r="45" fill="#fcd34d" />
+                
+                <!-- Mata Kiri (Menutup Kecewa) -->
+                <path d="M 25 40 Q 35 30 45 40" stroke="#451a03" stroke-width="4" fill="transparent" stroke-linecap="round"/>
+                
+                <!-- Mata Kanan (Menutup Kecewa) -->
+                <path d="M 55 40 Q 65 30 75 40" stroke="#451a03" stroke-width="4" fill="transparent" stroke-linecap="round"/>
+                
+                <!-- Mulut Sedih -->
+                <path d="M 35 70 Q 50 55 65 70" stroke="#451a03" stroke-width="5" fill="transparent" stroke-linecap="round"/>
+                
+                <!-- Air Mata Kiri -->
+                <path class="tear" d="M 30 45 C 30 45, 25 55, 30 60 C 35 55, 30 45, 30 45" fill="#38bdf8"/>
+                
+                <!-- Air Mata Kanan -->
+                <path class="tear" style="animation-delay: 1s;" d="M 70 45 C 70 45, 65 55, 70 60 C 75 55, 70 45, 70 45" fill="#38bdf8"/>
+            </svg>
+        </div>
+
+        <!-- Papan Rusak Mengayun -->
+        <div class="broken-sign">
+            Gangguan Sistem
+        </div>
+
+        <!-- Teks Kekecewaan -->
+        <h1>Yahh... <span>Gabisa Diakses</span></h1>
+        <p>Maaf ya, halaman yang kamu tuju saat ini <strong>SEDANG DALAM PERBAIKAN</strong>. Teknisi kami sedang bekerja keras untuk memulihkannya. Silakan kembali lagi nanti!</p>
+
+        <!-- Tombol Aksi -->
+        <a href="../index.html" class="btn-back">
+            &larr; Kembali ke Beranda
+        </a>
+
+    </div>
+
+</body>
+</html>
